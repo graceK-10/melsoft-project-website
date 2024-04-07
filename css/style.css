@@ -77,22 +77,26 @@
 }
 
 .image-nav{
-    position: fixed;
-    top: 0;
-    left: 1500px;
+    position: absolute;
+    top: 15px;
+    left: 155px; /* Adjust left position as needed */
+    transform: translateX(-50%);
+    width: 20%;
 }
 
 .navbar .navbar-nav {
     padding: 15px 0;
+    margin-top: 75px;
 }
 
 .navbar .navbar-nav .nav-link {
-    padding: 10px;
+    padding-top: 25px;
     color: black;
     font-size: 28px;
     outline: none;
     font-weight: bold;
-    
+    margin-right: 85px;
+    margin-left: 15px;
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -127,6 +131,10 @@
     visibility: visible;
     transition: .5s;
     opacity: 1;
+}
+
+.bi-search{
+    color: black;
 }
 
 
