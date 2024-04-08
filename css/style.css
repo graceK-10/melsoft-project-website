@@ -15,6 +15,30 @@
 
 /*** Spinner End ***/
 
+:root {
+    --font-default:  "Montserrat", sans-serif; 
+    --font-primary: "Playfair Display", serif;
+    --font-secondary: "Poppins", sans-serif;
+  }
+  
+  /* Colors */
+  :root {
+    --color-default: #222222;
+    --bs-primary:#4432a7;
+    --bs-secondary: #b662cf;
+    --bs-green: #1dad71;
+  }
+
+  :root {
+    --bs-primary: linear-gradient(to right,#000, #4432a7); 
+  }
+
+  /*
+  
+    background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+
+  */
+  
 
 /*** Button Start ***/
 .btn {
@@ -79,7 +103,7 @@
 .image-nav{
     position: absolute;
     top: 15px;
-    left: 155px; /* Adjust left position as needed */
+    left: 0; /* Adjust left position as needed */
     transform: translateX(-50%);
     width: 20%;
 }
@@ -96,12 +120,11 @@
     outline: none;
     font-weight: bold;
     margin-right: 85px;
-    margin-left: 15px;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: #bb24e9 !important;
+    color: var(--bs-green);
 }
 
 .navbar .dropdown-toggle::after {
@@ -111,6 +134,27 @@
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    padding-bottom: 5px; /* Adjust as needed */
+}
+
+.navbar-nav .nav-item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Adjust thickness of underline */
+    width: 0;
+    background-color: #12007A; /* Adjust color of underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover:after {
+    width: 100%;
+    color: #b662cf;
 }
 
 @media (min-width: 992px) {
@@ -133,8 +177,30 @@
     opacity: 1;
 }
 
-.bi-search{
-    color: black;
+.search-placeholder {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3%;
+    right: 0;
+    color: #12007A;
+}
+
+.search-icon {
+    position: absolute;
+    top: 65%;
+    right: 25px;
+    transform: translateY(-80%);
+    color: #000000; /* Placeholder text color */
+    cursor: pointer;
+}
+
+.search-input {
+    width: 200px; /* Adjust width as needed */
+    padding: 8px 30px 8px 10px; /* Adjust padding as needed */
+    border: 1px solid #12007A; /* Placeholder border color */
+    border-radius: 10px; /* Placeholder border radius */
+    font-size: 16px; /* Placeholder font size */
+    background-color: #ffffff;
 }
 
 
@@ -142,6 +208,10 @@
 
 
 /*** Carousel Start ***/
+
+
+
+
 
 .carousel-item {
     position: relative;
@@ -308,6 +378,17 @@
 /*** Carousel End ***/
 
 
+/*** Container Start ***/
+.container-fluid.bg-secondary {
+    background: var(--bs-primary);
+}
+
+.counter-value {
+    color: var(--bs-green);
+}
+
+/*** Container End ***/
+
 /*** Services Start ***/
 
 .services .services-item {
@@ -363,6 +444,19 @@
 }
 
 /*** Services End ***/
+
+/*** ABOUT US ***/
+.background-section {
+    background-image: url('img/about-background.jpeg'); /* Specify the path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+    height: 100vh; /* Set the height of the section (viewport height) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; Set text color */
+}
 
 
 /*** Project Start ***/
