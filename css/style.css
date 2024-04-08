@@ -23,7 +23,7 @@
   
   /* Colors */
   :root {
-    --color-default: #222222;
+    --color-default: #000000;
     --bs-primary:#4432a7;
     --bs-secondary: #b662cf;
     --bs-green: #1dad71;
@@ -409,7 +409,7 @@
     top: 0;
     left: 0;
     border-radius: 10px 10px 0 0;
-    background: rgba(3, 43, 243, 0.8);
+    background: rgba(220, 225, 252, 0.8);
     transition: .5s;
 }
 
@@ -421,7 +421,7 @@
 
 .services-item:hover .services-content::after {
     height: 100%;
-    opacity: 1;
+    opacity: 33;
     transition: .5s;
 }
 
@@ -436,27 +436,15 @@
 }
 
 .services-item:hover .services-content-icon i {
-    color: var(--bs-secondary) !important;
+    color: var(--bs-primary) !important;
 }
 
 .services-item:hover .services-content-icon p {
-    color: var(--bs-white);
+    color: var(--bs-black);
 }
 
 /*** Services End ***/
 
-/*** ABOUT US ***/
-.background-section {
-    background-image: url('img/about-background.jpeg'); /* Specify the path to your image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the background */
-    height: 100vh; /* Set the height of the section (viewport height) */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* color: #fff; Set text color */
-}
 
 
 /*** Project Start ***/
@@ -751,3 +739,10 @@
 }
 
 /*** Footer End ***/
+
+.btn{
+    background-color: var(--bs-primary);
+    border-radius: 2px solid #000;
+    color: #000;
+    transition: all 0.3s ease;
+}
