@@ -709,11 +709,17 @@
 }
 
 .contact-map {
-    background: #26d48c;
+    background: var(--bs-primary);
+    max-width: 800px; /* Set maximum width */
+    max-height: 400px; /* Set maximum height */
+    margin: auto; /* Center the div horizontally */
+    overflow: hidden;
 }
 
+
+
 .contact-form {
-    background: #26d48c;
+    background: var(--bs-primary);
 }
 
 /*** Contact End ***/
